@@ -4,18 +4,22 @@ Has Lookup Extension
 What is it for?
 ===============
 
-Rather than storing a list of things in the database as strings, e.g. Mr, Mrs 
-and so on, instead we store an integer value that we can look up to get the 
-true value. This is done for a number of reasons, e.g. it is easy to change the 
-meaning of a code without having to update large tables, storing an integer is 
-a lot less space than a string and so on. It is also easy to translate a site 
+Rather than storing a list of things in the database as strings, e.g. Mr, Mrs
+and so on, instead we store an integer value that we can look up to get the
+true value. This is done for a number of reasons, e.g. it is easy to change the
+meaning of a code without having to update large tables, storing an integer is
+a lot less space than a string and so on. It is also easy to translate a site
 if needed, but this plugin isn't sophisticated enough to do that.
 
-It does have some disadvantages in that you need to know what the magic number 
-means and it can make writing queries a pain. The plugin has methods that will 
+It does have some disadvantages in that you need to know what the magic number
+means and it can make writing queries a pain. The plugin has methods that will
 help with this.
 
 For more information look in the file doc/introduction.rtf
+
+This Rails plugin can be installed with the command:
+
+script/plugin install git://github.com/fjfish/has_lookup_extension.git
 
 Copyright (c) 2008 Francis Fish, Marketrix, released under the MIT license
 

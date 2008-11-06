@@ -1,6 +1,5 @@
 # Install hook code here
 # create the migration
-RAILS_ROOT = "."
 puts "Creating the migration"
 system "ruby script/generate model lookup_codes"
 # Find the lookup codes file and replace it with this
