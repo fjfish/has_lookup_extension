@@ -1,7 +1,7 @@
 # Install hook code here
 # create the migration
 puts "Creating the migration"
-system "ruby script/generate model lookup_codes"
+system "ruby script/generate model lookup_code"
 # Find the lookup codes file and replace it with this
 lookup_name = Dir.glob("db/migrate/*lookup_code*.rb").first
 lookup_text = <<-EOT
