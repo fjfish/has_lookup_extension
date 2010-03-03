@@ -91,7 +91,7 @@ module Admin::LookupCodesLoader
 
       finance_types = ['Please select', 'Credit card','Unsecured Loan','Mortgage','Car Finance','Furniture Finance','Electrical Goods Finance','Catalogue','Other Financial Product','Secured Loan']
       add_codes('Finance Type', finance_types)
-      
+
       occupations = ["Please select","Admininstrator","Apprentice","Barrister","Builder","Bus Driver","Carer",
         "Case Assistant","Child Minder","Civil Servant","Cleaner","Clerical","Clerk","Decorator",
         "Director","Disabled","Doctor","Drivers Mate","Electrician","Financial Advisor","Gardener",
@@ -101,7 +101,7 @@ module Admin::LookupCodesLoader
         "Salesperson","Shop Assistant","Solicitor","Supervisor","Taxi Driver","Teacher",
         "Teaching Assistant","Team Leader","Telephonist","Tradesman","Typist","Unskilled","Window Fitter"]
       add_codes('Occupation', occupations)
-      
+
 
       nil
     end
@@ -109,6 +109,7 @@ module Admin::LookupCodesLoader
 
     private
     def add_codes(domain_name, value_list)
+      puts "loading #{domain_name}"
       for i in (0...value_list.length)
         LookupCode.create!( :domain =>  domain_name , :lookup_id => i , :value => value_list[i] )
       end
